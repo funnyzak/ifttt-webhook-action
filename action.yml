@@ -1,0 +1,33 @@
+# action.yml
+name: IFTTT-Webhook-ACTION
+author: funnyzak
+description: ifttt maker webhook action.
+branding:
+  icon: 'message-square'
+  color: 'gray-dark'
+inputs:
+  key:
+    description: 'ifttt webhook key'
+    required: true
+  event:
+    description: 'The name of the event, like "button_pressed" or "front_door_opened". Use only letters, numbers, and underscores.'
+    required: true
+  value1:
+    description: 'The data is completely optional, and you can also pass value1, value2, and value3 as query parameters or form variables. This content will be passed on to the action in your Applet.'
+    required: false
+  value2:
+    description: 'The data is completely optional, and you can also pass value1, value2, and value3 as query parameters or form variables. This content will be passed on to the action in your Applet.'
+    required: false
+  value3:
+    description: 'The data is completely optional, and you can also pass value1, value2, and value3 as query parameters or form variables. This content will be passed on to the action in your Applet.'
+    required: false
+outputs:
+  response:
+    description: 'meta response'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.key }}
+    - ${{ inputs.head }}
+    - ${{ inputs.body }}
