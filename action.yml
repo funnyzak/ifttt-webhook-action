@@ -1,5 +1,5 @@
 # action.yml
-name: IFTTT-Webhook-ACTION
+name: ifttt-webhook-maker-action
 author: funnyzak
 description: ifttt maker webhook action.
 branding:
