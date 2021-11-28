@@ -21,7 +21,7 @@ steps:
   - name: IFTTT Webhook.
     uses: funnyzak/ifttt-webhook-action@master
     with:
-      key: ${{ secrets.JISHIDA_PUSH_KEY }}
+      key: ${{ secrets.IFTTT_KEY }}
       event: notify
       value1: hi
       value2: hello
@@ -44,7 +44,7 @@ steps:
   - name: IFTTT Webhook
     uses: funnyzak/ifttt-webhook-action@master
     with:
-      key: ${{ secrets.JISHIDA_PUSH_KEY }}
+      key: ${{ secrets.IFTTT_KEY }}
       event: notify
       value1: ${{ steps.GetReadMe.outputs.body }}
 ```
