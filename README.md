@@ -19,7 +19,7 @@ A GitHub action that triggers an [IFTTT webhooks](https://ifttt.com/maker_webhoo
 ```yaml
 steps:
   - name: IFTTT Webhook.
-    uses: funnyzak/ifttt-webhook-maker-action@master
+    uses: funnyzak/ifttt-webhook-action@v1
     with:
       key: ${{ secrets.IFTTT_KEY }}
       event: notify
@@ -42,7 +42,7 @@ steps:
       readme_content="${readme_content//$'\r'/'%0D'}"
       echo "::set-output name=body::$readme_content"
   - name: IFTTT Webhook
-    uses: funnyzak/ifttt-webhook-maker-action@master
+    uses: funnyzak/ifttt-webhook-action@v1
     with:
       key: ${{ secrets.IFTTT_KEY }}
       event: notify
